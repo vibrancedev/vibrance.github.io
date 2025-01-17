@@ -55,6 +55,7 @@ a {
     position: relative;
 }
 
+
 /* loader!! */
 
 #preloader{
@@ -318,9 +319,56 @@ align-content: center;
 .container1 {
     position: relative;
     width: 100%;
-    height: 90vh; 
-    overflow: hidden
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("/images/main.jpg");
+    background-size: cover;
+    background-position: center 10%;
+    background-repeat: no-repeat;
+
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
 }
+
+.container1 .text {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.container1 .text h1, 
+.container1 .text h2 {
+    font-size: 3rem; /* Adjust size as needed */
+    font-weight: bold;
+    color: white !important; /* Ensures the text is white */
+    mix-blend-mode: screen; /* Applies the screen blend effect */
+    margin: 0; /* Removes default margin for h1 and h2 */
+}
+
+.container1 .text h1 {
+    font-size: 4rem; /* Make h1 larger than h2 */
+}
+
+.text.first-row {
+    text-align: center; /* Ensures the text and button are centered */
+}
+
+.text.first-row .bigbutton {
+    margin-top: 20px; /* Adds space above the button */
+    font-size: 1.5rem;
+   
+}
+
+.text.second-row {
+    text-align: center; /* Ensures the text and button are centered */
+}
+
+.text.second-row .bigbutton {
+    margin-top: 20px; /* Adds space above the button */
+    font-size: 1.5rem;
+}
+
 
 .container1 video {
     position: absolute;
@@ -350,6 +398,26 @@ align-content: center;
 .column img {
     vertical-align: middle;
     width: 100%;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 0;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0; /* No rounded corners */
+    box-shadow: none; /* No shadow */
+}
+
+@media (max-width: 600px) {
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .footer{
@@ -537,7 +605,7 @@ align-content: center;
     }
 
     .container1 {
-        background-image: url('/images/vibrance.png'); /* Mobile background image */
+        background-image: url('/images/main.jpg'); /* Mobile background image */
         background-size: cover;
         background-position: center;
     }
