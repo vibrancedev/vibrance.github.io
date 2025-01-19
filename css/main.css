@@ -9,6 +9,8 @@
 
   }
 
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -491,6 +493,10 @@ align-content: center;
 
 .icon{
     width: 50px;
+}
+
+.footercontainer a {
+    color: var(--purple1);
 }
 
 
